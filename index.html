@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <style>
+      :root {
+        --icon-mode: url("./images/light-mode.svg");
+        --bg-color: white;
+        --text-color: black;
+        --bg-initial: inherit;
+      }
+      .dark {
+        --bg-color: black;
+        --icon-mode: url("./images/dark-mode.svg");
+        --bg-initial: white;
+        --text-color: white;
+      }
+      body {
+        color: var(--text-color);
+        background-color: var(--bg-color);
+      }
+      .dark-mode-btn {
+        background-color: var(--bg-initial);
+        padding: 20px;
+        background-image: var(--icon-mode);
+      }
+      button {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="mode-btn-box text-center">
+        <button class="dark-mode-btn mt-5"></button>
+      </div>
+      <h1 class="text-center my-4">Contact Book</h1>
+      <h2>New Contact</h2>
+      <div class="d-flex justify-content-between">
+        <form class="js-form form w-50 me-auto pe-5 mt-2">
+          <div>
+            <input
+              class="js-input-name form-control"
+              type="text"
+              placeholder="Name"
+              required
+            />
+            <input
+              class="js-input-relationship form-control my-4"
+              type="text"
+              placeholder="relationship"
+              required
+            />
+            <input
+              class="js-input-phone form-control"
+              type="number"
+              placeholder="Phone"
+              required
+            />
+            <button class="btn btn-primary mt-3">Send</button>
+          </div>
+        </form>
+        <div class="w-50 ms-auto p-3 js-contact"></div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
